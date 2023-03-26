@@ -1,0 +1,141 @@
+body{
+  text-align: center;
+  font-family: monospace;
+  margin-bottom: 200px;
+  transition: all 1s;
+}
+
+nav{
+  width: 150px;
+  height: 100vh;
+  padding: 100px 20px;
+  background-color: #d2a3d2;
+  position: fixed;
+  right: -190px;
+  top: 0;
+  transition: right 0.3s;
+}
+
+nav.show{
+  right: 0px;
+}
+
+nav.item{
+  margin-bottom: 20px;
+}
+
+.hamburger{
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.bun{
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: black;
+  margin-bottom: 3px;
+}
+
+/*Scroll Style*/
+
+h1{
+  font-size: 50px;
+  
+}
+
+img{
+  width: 150px;
+  padding-left: 15px;
+}
+
+.song{
+  margin: 20px auto;
+  width: 500px;
+  background-color: #d2a3d2;
+  height: 200px;
+  border-radius: 4px;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  transition: top 0.4s, opacity 0.4s;
+  opacity: 0;
+}
+
+.songText{
+  text-align: left;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.song.slide{
+  top: 0;
+  opacity: 1;
+}
+
+/*Dark Mode Style*/ 
+
+button{
+  padding: 10px;
+  margin: auto;
+  background-color:#e7cbe7;
+  border: 2px solid black;
+  color: black;
+  
+}
+
+body.dark{
+  background-color: rgb(37,37,37);
+  color: white;
+}
+
+button.dark{
+  padding: 10px;
+  margin: auto;
+  background-color:#935893;
+  border: 2px solid black;
+  color: white;
+}
+
+.song.dark{
+  background-color: rgb(56,56,59);
+  color: white;
+}
+
+nav.dark{
+  background-color:  #d2a3d2);
+}
+
+.bun.dark{
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: white;
+  margin-bottom: 3px;
+}
+
+.navDropdown{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden; 
+  transition: max-height .5s;
+}
+
+.navDropdown a{
+  display: block;
+  font-size: 16px;
+  padding: 4px 0;
+  text-decoration: none;
+}
+
+.navItem:hover .navDropdown{
+  max-height: 144px; 
+/*   Height should be a multiple of 24 to fit more links */
+}
